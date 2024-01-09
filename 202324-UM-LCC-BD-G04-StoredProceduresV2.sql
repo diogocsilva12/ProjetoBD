@@ -12,8 +12,10 @@
 -- Criação de uma stored procedure para adicionar bilhetes vendidos para um Evento (todas as suas atividades), assim como a atualização de informações sobre o mesmo.
 -- Nesta stored procedure, os bilhetes também vão ser adicionados 1 a 1 a uma tabela bilhetes vendidos, de forma a ter uma segunda via para o controlo dos mesmos.
 -- DROP PROCEDURE AtualizarInfoBilhetesVendidosEventos
+
+-- IMPLEMENTAR NESTA SP UMA TRANSÃO PARA ANALISE DE ERROS E REALIZAÇÃO DE COMMIT E ROLLBACK
 DELIMITER $$
-CREATE PROCEDURE AtualizarInfoBilhetesVendidosEventos(
+CREATE PROCEDURE spAtualizarInfoBilhetesVendidosEventos(
     IN QuantidadeBilhetes INTEGER,   -- Argumento de entrada relativa à quantidade de bilhetes a comprar.
     IN Evento_Id INTEGER,			 -- Argumento de entrada que diz qual o evento que queremos comprar o bilhete.
     OUT Resultado VARCHAR(150)		 -- Argumento de saída com informações relativas ao controlo de operações durante esta transação.
@@ -86,9 +88,10 @@ END$$
 -- Nesta stored procedure, os bilhetes também vão ser adicionados 1 a 1 a uma tabela bilhetes vendidos, de forma a ter uma segunda via para o controlo dos mesmos.
 -- DROP PROCEDURE AtualizarInfoBilhetesVendidosEventos
 -- Este procedimento é para comprar bilhetes para atividades num evento
+-- adicionar o mesmo da de cima
 DELIMITER $$
 
-CREATE PROCEDURE AtualizarInfoBilhetesVendidosAtividades(
+CREATE PROCEDURE spAtualizarInfoBilhetesVendidosAtividades(
     IN QuantidadeBilhetes INTEGER,
     IN Atividade_Id INTEGER,
     OUT Resultado VARCHAR(150)
@@ -154,12 +157,17 @@ AtualizarBilhetesAtividades:BEGIN
     END IF;
 END$$
 
+-- ############################################################################################
+-- spTop5Receitas 
+
+-- sp
+
 
 -- ############################################################################################
 
 DELIMITER $$
 -- REINICIA A CONTAGEM DA QUANTIDADE E DO VALOR TOTAL
-CREATE PROCEDURE ResetValoresEventos(
+CREATE PROCEDURE spResetValoresEventos(
     IN Evento_Id INTEGER
 )
 BEGIN
@@ -174,7 +182,7 @@ END$$
 
 DELIMITER $$
 -- REINICIA A CONTAGEM DA QUANTIDADE E DO VALOR TOTAL
-CREATE PROCEDURE ResetValoresAtividades(
+CREATE PROCEDURE spResetValoresAtividades(
     IN Atividade_Id INTEGER
 )
 BEGIN
@@ -193,7 +201,7 @@ END$$
 
 DELIMITER $$
 
-CREATE PROCEDURE ResetAll(
+CREATE PROCEDURE spResetAll(
     IN LastEvento INTEGER,
     IN LastAtividade INTEGER
 )
