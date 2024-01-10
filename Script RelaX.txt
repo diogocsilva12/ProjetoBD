@@ -1,0 +1,28 @@
+group: Eventos
+
+agente = {IdAgente, Nome, TelefoneAgente, EmailAgente
+					1, "agentetest", "111111111", "emailtest"
+}
+
+artista = {IdArtista, Nome, Descricao, IdAgente
+					1, "agentetest", "111111111", "emailtest"
+}	
+
+atividade = {IdAtividade, Nome, Descricao, Pago, CodPostal, Rua, DescricaoLocal, Data, Lotacao, IdEvento, IdArtista, ValorTotal, QuantidadeBilhetesVendidos, BilhetesDisponiveis, Preco, CustoAtividade
+1,"test","test",true,1111,"test","test",2023-01-01,1111,1,1,1111,1111,1111,1111,1111
+}
+
+bilhete = {NumBilhete, Preco, IdEvento, IdAtividade
+ 						1,1,1,1}
+
+bilhetesvendidos = {IdBilheteVendido,IdEvento,IdAtividade,Quantidade,DataVenda,PrecoVenda,IdBilhete
+1,1,1,1,2023-01-01,1,1}
+
+Evento = {IdEvento, nome , descricao, datainicio,datafim,codpostal,descricaolocal,rua,pago,valortotal,quantidadebilhetesvendidos,custoevento,preco
+1,"test","Test",2023-01-01,2023-01-02,1111,"test","test",true,1,1,1,1}
+
+staff = {idstaff,nome,funcao,telefone
+1,"test","test",1}
+
+staffevento = {staff,evento
+1,1}

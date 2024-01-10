@@ -156,15 +156,22 @@ CREATE TABLE BilhetesVendidos (
     Quantidade INTEGER NOT NULL,
     DataVenda DATETIME NOT NULL,
     PreçoVenda DECIMAL(8,2) NOT NULL,
+    IdBilhete INT,
     PRIMARY KEY (IdBilheteVendido),
     FOREIGN KEY (IdEvento) 
 			REFERENCES Evento(IdEvento),
     FOREIGN KEY (IdAtividade) 
-			REFERENCES Atividade(IdAtividade)
+			REFERENCES Atividade(IdAtividade),
+	FOREIGN KEY (IdBilhete)
+			REFERENCES Bilhete(NumBilhete)
 )
 ENGINE = InnoDB;
 
 -- FIM
+
+
+
+
 
 
 
