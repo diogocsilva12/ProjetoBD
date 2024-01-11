@@ -73,5 +73,7 @@ SELECT E.IdEvento, E.Nome AS Evento, A.Nome AS Atividade, B.Preço AS Preco
         INNER JOIN Bilhete AS B
         ON A.IdAtividade = B.IdAtividade
 	WHERE A.Pago = true AND E.Pago = false
+    
+    
 
     
