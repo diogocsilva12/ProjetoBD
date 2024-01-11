@@ -7,3 +7,12 @@
 -- **
 
 -- **   Í N D I C E S   **   
+
+CREATE INDEX DataVenda ON BilhetesVendidos (DataVenda);
+
+CREATE INDEX NomeEvento ON Evento(Nome);
+CREATE INDEX DataInicioEvento ON Evento(DataInicio);
+
+CREATE INDEX NomeAtividade ON Atividade(Nome);
+CREATE INDEX DataInicioAtividade ON Atividade(Data);
+

@@ -23,6 +23,7 @@ BEGIN
 	WHERE YEAR(DATAINICIO) = Ano;
 END $$
 
+CALL spContaEventosAno(2024);
 
 -- QUERIE b)
 -- Obter o número de bilhetes vendidos por evento, ordenados por quantidade de bilhetes vendidos.
@@ -35,21 +36,42 @@ SELECT IdEvento, SUM(Quantidade) AS TotalBilhetesVendidos
 -- QUERIE c)
 -- Calcular o total obtido por evento, ordenado pelo valor total em ordem crescente.
 
-
--- QUERIE d)
--- Ver o número único de elementos do staff que ajudou em todos os eventos.
+SELECT IdEvento, ValorTotal FROM Evento
+	ORDER BY(ValorTotal) DESC;
 
 
 -- QUERIE e)
--- Selecionar os agentes que agenciam mais do que 3 artistas e quem agenciam.
+-- Selecionar os agentes que agenciam 2 ou mais artistas e quem agenciam.
 
-
--- QUERIE f)
--- Fazer um relatório anual da receita gerada por ano. (Vamos utilizar o ano de 2023 para exemplificar)
-
--- QUERIE g)
--- Mostrar o artista mais caro.
+SELECT A.Nome AS NomeAgente, AR.Nome AS NomeArtista
+	FROM Agente AS A
+	INNER JOIN Artista AS AR
+		ON A.IdAgente = AR.IdAgente
+	WHERE A.IdAgente IN (
+		SELECT A.IdAgente
+		FROM Agente AS A
+		INNER JOIN Artista AS AR
+			ON A.IdAgente = AR.IdAgente
+		GROUP BY A.IdAgente
+		HAVING COUNT(AR.IdAgente) > 2
+)
+	
 
 -- QUERIE h)
 -- Listar todos os eventos grátis
 
+SELECT IdEvento, Nome FROM Evento
+	WHERE Pago = false
+
+
+-- g) Selecionar os eventos grátis que tenham atividades pagas, dizendo quais são as atividades pagas e os respetivos valores
+
+SELECT E.IdEvento, E.Nome AS Evento, A.Nome AS Atividade, B.Preço AS Preco
+	FROM Evento AS E
+    INNER JOIN Atividade AS A
+		ON E.IdEvento = A.IdEvento	
+        INNER JOIN Bilhete AS B
+        ON A.IdAtividade = B.IdAtividade
+	WHERE A.Pago = true AND E.Pago = false
+
+    
