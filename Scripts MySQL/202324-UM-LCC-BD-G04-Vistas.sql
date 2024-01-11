@@ -5,7 +5,7 @@
 -- SELECT VERSION()
 -- Grupo 4 - Diogo Coelho da Silva (A100092) - Pedro Miguel Oliveira Ramôa (A97686) 2023, 2024.
 -- **
-
+-- USE Eventos
 
 -- **   V I E W S   **   
 -- Definições de views, para serem utilizadas pelos utilizadores comuns da base de dados. Fornecem detalhes necessários para a consulta de eventos e atividades.

@@ -150,9 +150,9 @@ ENGINE = InnoDB;
 -- DROP TABLE BilhetesVendidos
 -- DESC BilhetesVendidos
 CREATE TABLE BilhetesVendidos (
-    IdBilheteVendido INT NOT NULL AUTO_INCREMENT,
-    IdEvento INT,
-    IdAtividade INT,
+    IdBilheteVendido INTEGER NOT NULL AUTO_INCREMENT,
+    IdEvento INTEGER,
+    IdAtividade INTEGER,
     Quantidade INTEGER NOT NULL,
     DataVenda DATETIME NOT NULL,
     PreçoVenda DECIMAL(8,2) NOT NULL,

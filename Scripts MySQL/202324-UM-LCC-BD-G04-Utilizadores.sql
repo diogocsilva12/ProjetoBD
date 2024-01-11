@@ -40,8 +40,8 @@ GRANT SELECT ON  Eventos.* TO 'bracaraevento'@'localhost';
 -- Definição de alguns previlégios para o utilizador 'genericuser'.
 -- Permissão para a execução de instruções SELECT para certas vistas de utilização.
 
-GRANT SELECT ON Eventos.Veventos TO 'genericuser'@'localhost';
-GRANT SELECT ON Eventos.Vatividades TO 'genericuser'@'localhost';
+GRANT SELECT ON Eventos.viewatividade TO 'genericuser'@'localhost';
+GRANT SELECT ON Eventos.viewevento TO 'genericuser'@'localhost';
 
 -- (FAZER AS VISTAS)
 
