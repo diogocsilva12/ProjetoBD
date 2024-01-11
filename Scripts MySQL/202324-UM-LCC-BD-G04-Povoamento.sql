@@ -97,75 +97,69 @@ VALUES
 -- DESC Artista
 -- SELECT * FROM Artista
 -- DELETE FROM Artista
-INSERT INTO Artista
-(IdArtista,Nome,Descrição,IdAgente)
-    VALUES
-    (1,'Michel Rodrigues','Artista de com grande reputação mundial, viajando pelo mundo inteiro nos seus 40 anos de carreira.',45),
-    (2,'Darth Vader','Líder e eterno gerrueiro da ordem dos Sith, prepara-se agora para uma turnê mundial.',2),
-    (3,'Tony Carreira','Movido por uma grande legião de fãs, Tony é um grande ídolo da nação portuguesa.',5),
-    (4,'Darth Maul','Conhecido pela música "Duel of Fates", Maul prometo fazer furor',2),
-    (5,'Ed Sheeran','Cantor e músico conhecido pelos seus hits internacionais e performances aclamadas.',36),
-    (6,'The Beatles','Banda lendária que revolucionou a música pop e deixou um legado duradouro na cultura mundial.',1),
-    (7,'Adele','Cantora com uma voz poderosa e letras emocionantes que a tornaram uma das mais reconhecidas artistas contemporâneas.',23),
-    (8,'Michael Jackson','Ícone da música pop, conhecido como "Rei do Pop", com uma carreira repleta de sucessos e inovações.',9),
-    (9,'Queen','Banda lendária que criou algumas das músicas mais icônicas da história do rock.',11),
-    (10,'Coldplay','Banda britânica aclamada, famosa por suas músicas emocionais e espetáculos ao vivo impressionantes.',27),
-    (11,'Drake','Rapper e cantor conhecido por seu sucesso no hip-hop e por influenciar a cultura musical.',10),
-    (12,'Jay-Z ','Rapper, empresário e produtor com uma carreira de sucesso tanto na música como nos negócios.',43),
-    (13,'Luke Skywalwer & Rey Skywalker','Duo que pormete iluminar todas as arenas que percorrerem',22),
-    (14,'Tino de Rans','----',41),
-    (15,'Miguel Alecrim','----',42),
-    (16,'Maroon 5','Banda pop conhecida por hits radiofônicos e performances ao vivo energéticas',23),
-    (17,'Foo Fighters','Banda de rock alternativo liderada pelo ex-baterista do Nirvana, Dave Grohl.',16),
-    (18,'Nirvana','Banda icónica dos anos 90 que deixou um legado duradouro na música.',16),
-    (19,'Ambrósio Miguel','----',42),
-    (20,'Rosmarinho silva','----',41);
-    
-INSERT INTO Artista (IdArtista, Nome, Descrição, IdAgente)
-VALUES
-    (21,'Britney Spears','Estrela pop conhecida pelos seus sucessos que lideram as tabelas e pelas performances icónicas.', 14),
-    (22,'Elton John','Músico lendário e compositor com uma carreira que abrange várias décadas.', 8),
-    (23,'Taylor Swift','Cantora e compositora celebrada pela narrativa nas suas músicas.', 19),
-    (24,'Beyoncé','Cantora e artista reconhecida pela sua voz poderosa e presença de palco', 6),
-    (25,'Justin Bieber','Sensação pop que ganhou fama numa idade jovem e continua a criar êxitos musicais.', 12),
-    (26,'Kanye West','Rapper influente, produtor e designer de moda.', 33),
-    (27,'Lady Gaga','Artista versátil reconhecida pelo seu estilo único e talento vocal.', 7),
-    (28,'Rihanna','Cantora, atriz e empresária aclamada pela sua música e empreendimentos de moda.', 18),
-    (29,'Bruno Mars','Músico multi-talentoso conhecido pela sua impressionante extensão vocal e performances ao vivo.', 25),
-    (30,'Ariana Grande','Sensação pop com uma voz poderosa e inúmeros êxitos nas tabelas.', 31),
-    (31,'Katy Perry','Cantora e compositora conhecida pelos seus hinos pop cativantes e espetáculos ao vivo elaborados.', 30),
-    (32,'U2','Banda de rock lendária aclamada pelas suas músicas grandiosas e concertos ao vivo impactantes.', 24),
-    (33,'Madonna','Ícone pop e influenciadora cultural conhecida pela sua música inovadora e persona.', 16),
-    (34,'Sia','Cantora e compositora reconhecida pelas suas músicas emotivas e estilo vocal único.', 22),
-    (35,'Eminem','Lenda do rap com uma carreira marcada pela mestria lírica e aclamação crítica.', 13),
-    (36,'Shakira','Superestrela global conhecida pelas suas performances dinâmicas e estilo musical diversificado.', 28),
-    (37,'David Bowie','Músico inovador e ícone cultural que desafiou limites na música e na moda.', 15),
-    (38,'Bob Marley','Lenda do reggae cuja música promoveu paz, amor e mudança social.', 21),
-    (39,'Whitney Houston','Voz poderosa celebrada pela sua alma na voz e músicas icónicas.', 17),
-    (40,'Prince','Génio musical e artista inovador com um vasto catálogo de êxitos.', 20);
-    INSERT INTO Artista (IdArtista, Nome, Descrição, IdAgente)
-VALUES
-    (41,'Mariza','Fadista reconhecida internacionalmente pela sua voz única e interpretações apaixonadas.', 52),
-    (42,'Carlos do Carmo','Ícone do fado, deixando um legado notável na música portuguesa.', 55),
-    (43,'Ana Moura','Fadista contemporânea com um estilo inovador e aclamada pela sua expressividade.', 52),
-    (44,'Amália Rodrigues','Rainha do fado e figura central na divulgação deste género musical tradicional português.', 51),
-    (45,'D.A.M.A.','Banda pop com sucesso comercial e um estilo cativante que conquistou o público português.', 58),
-    (46,'António Variações','Figura singular na música portuguesa, conhecido pela sua irreverência e criatividade.', 58),
-    (47,'Rui Veloso','Pioneiro do rock em Portugal, com uma carreira marcante e várias músicas icônicas.', 69),
-    (48,'Mão Morta','Banda de rock alternativo com uma abordagem única e letras provocativas.', 68),
-    (49,'Xutos & Pontapés','Banda rock com uma trajetória longa e um impacto duradouro na música portuguesa.', 68),
-    (50,'Gisela João','Fadista contemporânea, com uma voz envolvente e interpretações profundas.', 68),
-    (51,'Capitão Fausto','Banda indie pop aclamada pela sua originalidade e letras inteligentes.', 68),
-    (52,'Moonspell','Banda de metal com uma presença forte no cenário internacional.', 51),
-    (53,'Amor Electro','Grupo pop com um som cativante e músicas que conquistaram o público português.', 54),
-    (54,'Quim Barreiros','Artista popular, conhecido pelo seu estilo animado e músicas festivas.', 53),
-    (55,'HMB','Banda soul/pop com um som contemporâneo e presença marcante ao vivo.', 55),
-    (56,'The Gift','Banda de música alternativa com composições originais e distintas.', 55),
-    (57,'Pedro Abrunhosa','Músico com uma carreira sólida e várias canções de sucesso.', 56),
-    (58,'Deolinda','Grupo musical com um estilo marcante que funde música tradicional com influências contemporâneas.', 67),
-    (59,'António Zambujo','Fadista e músico talentoso com uma abordagem única e sofisticada.', 60),
-    (60,'Aurea','Cantora pop com uma voz poderosa e músicas que alcançaram sucesso nacional.', 61),
-    (61,'Dj Kura','Um dos Djs mais conhecidos em portugal e também muito cotado internacionalmente.',70);
+INSERT INTO Artista (IdArtista, Nome, Descrição, IdAgente, CustoArtista)
+	VALUES
+    (1, 'Michel Rodrigues', 'Artista com grande reputação mundial, viajando pelo mundo inteiro nos seus 40 anos de carreira.', 45, 2000.00),
+    (2, 'Darth Vader', 'Líder e eterno guerreiro da ordem dos Sith, prepara-se agora para uma turnê mundial.', 2, 2500.00),
+    (3, 'Tony Carreira', 'Movido por uma grande legião de fãs, Tony é um grande ídolo da nação portuguesa.', 5, 1500.00),
+    (4, 'Darth Maul', 'Conhecido pela música "Duel of Fates", Maul promete fazer furor.', 2, 1800.00),
+    (5, 'Ed Sheeran', 'Cantor e músico conhecido pelos seus hits internacionais e performances aclamadas.', 36, 3000.00),
+    (6, 'The Beatles', 'Banda lendária que revolucionou a música pop e deixou um legado duradouro na cultura mundial.', 1, 5000.00),
+    (7, 'Adele', 'Cantora com uma voz poderosa e letras emocionantes que a tornaram uma das mais reconhecidas artistas contemporâneas.', 23, 2800.00),
+    (8, 'Michael Jackson', 'Ícone da música pop, conhecido como "Rei do Pop", com uma carreira repleta de sucessos e inovações.', 9, 4000.00),
+    (9, 'Queen', 'Banda lendária que criou algumas das músicas mais icônicas da história do rock.', 11, 3500.00),
+    (10, 'Coldplay', 'Banda britânica aclamada, famosa por suas músicas emocionais e espetáculos ao vivo impressionantes.', 27, 3200.00),
+    (11, 'Drake', 'Rapper e cantor conhecido por seu sucesso no hip-hop e por influenciar a cultura musical.', 10, 2200.00),
+    (12, 'Jay-Z', 'Rapper, empresário e produtor com uma carreira de sucesso tanto na música como nos negócios.', 43, 2500.00),
+    (13, 'Luke Skywalwer & Rey Skywalker', 'Duo que promete iluminar todas as arenas que percorrerem.', 22, 1800.00),
+    (14, 'Tino de Rans', '----', 41, 500.00),
+    (15, 'Miguel Alecrim', '----', 42, 550.00),
+    (16, 'Maroon 5', 'Banda pop conhecida por hits radiofônicos e performances ao vivo energéticas', 23, 2800.00),
+    (17, 'Foo Fighters', 'Banda de rock alternativo liderada pelo ex-baterista do Nirvana, Dave Grohl.', 16, 3000.00),
+    (18, 'Nirvana', 'Banda icónica dos anos 90 que deixou um legado duradouro na música.', 16, 2500.00),
+    (19, 'Ambrósio Miguel', '----', 42, 600.00),
+    (20, 'Rosmarinho Silva', '----', 41, 550.00),
+    (21, 'Britney Spears', 'Estrela pop conhecida pelos seus sucessos que lideram as tabelas e pelas performances icónicas.', 14, 3500.00),
+    (22, 'Elton John', 'Músico lendário e compositor com uma carreira que abrange várias décadas.', 8, 4000.00),
+    (23, 'Taylor Swift', 'Cantora e compositora celebrada pela narrativa nas suas músicas.', 19, 3000.00),
+    (24, 'Beyoncé', 'Cantora e artista reconhecida pela sua voz poderosa e presença de palco', 6, 3800.00),
+    (25, 'Justin Bieber', 'Sensação pop que ganhou fama numa idade jovem e continua a criar êxitos musicais.', 12, 2500.00),
+    (26, 'Kanye West', 'Rapper influente, produtor e designer de moda.', 33, 2000.00),
+    (27, 'Lady Gaga', 'Artista versátil reconhecida pelo seu estilo único e talento vocal.', 7, 3200.00),
+    (28, 'Rihanna', 'Cantora, atriz e empresária aclamada pela sua música e empreendimentos de moda.', 18, 3500.00),
+    (29, 'Bruno Mars', 'Músico multi-talentoso conhecido pela sua impressionante extensão vocal e performances ao vivo.', 25, 3000.00),
+    (30, 'Ariana Grande', 'Sensação pop com uma voz poderosa e inúmeros êxitos nas tabelas.', 31, 2800.00),
+    (31, 'Katy Perry', 'Cantora e compositora conhecida pelos seus hinos pop cativantes e espetáculos ao vivo elaborados.', 30, 3200.00),
+    (32, 'U2', 'Banda de rock lendária aclamada pelas suas músicas grandiosas e concertos ao vivo impactantes.', 24, 3800.00),
+    (33, 'Madonna', 'Ícone pop e influenciadora cultural conhecida pela sua música inovadora e persona.', 16, 4000.00),
+    (34, 'Sia', 'Cantora e compositora reconhecida pelas suas músicas emotivas e estilo vocal único.', 22, 2800.00),
+    (35, 'Eminem', 'Lenda do rap com uma carreira marcada pela mestria lírica e aclamação crítica.', 13, 3000.00),
+    (36, 'Shakira', 'Superestrela global conhecida pelas suas performances dinâmicas e estilo musical diversificado.', 28, 3500.00),
+    (37, 'David Bowie', 'Músico inovador e ícone cultural que desafiou limites na música e na moda.', 15, 3800.00),
+    (38, 'Bob Marley', 'Lenda do reggae cuja música promoveu paz, amor e mudança social.', 21, 2500.00),
+    (39, 'Whitney Houston', 'Voz poderosa celebrada pela sua alma na voz e músicas icónicas.', 17, 3200.00),
+    (40, 'Prince', 'Génio musical e artista inovador com um vasto catálogo de êxitos.', 20, 3500.00),
+    (41, 'Mariza', 'Fadista reconhecida internacionalmente pela sua voz única e interpretações apaixonadas.', 52, 1500.00),
+    (42, 'Carlos do Carmo', 'Ícone do fado, deixando um legado notável na música portuguesa.', 55, 1800.00),
+    (43, 'Ana Moura', 'Fadista contemporânea com um estilo inovador e aclamada pela sua expressividade.', 52, 1600.00),
+    (44, 'Amália Rodrigues', 'Rainha do fado e figura central na divulgação deste género musical tradicional português.', 51, 2000.00),
+    (45, 'D.A.M.A.', 'Banda pop com sucesso comercial e um estilo cativante que conquistou o público português.', 58, 1200.00),
+    (46, 'António Variações', 'Figura singular na música portuguesa, conhecido pela sua irreverência e criatividade.', 58, 1400.00),
+    (47, 'Rui Veloso', 'Pioneiro do rock em Portugal, com uma carreira marcante e várias músicas icônicas.', 69, 1800.00),
+    (48, 'Mão Morta', 'Banda de rock alternativo com uma abordagem única e letras provocativas.', 68, 1600.00),
+    (49, 'Xutos & Pontapés', 'Banda rock com uma trajetória longa e um impacto duradouro na música portuguesa.', 68, 1500.00),
+    (50, 'Gisela João', 'Fadista contemporânea, com uma voz envolvente e interpretações profundas.', 68, 1400.00),
+    (51, 'Capitão Fausto', 'Banda indie pop aclamada pela sua originalidade e letras inteligentes.', 68, 1600.00),
+    (52, 'Moonspell', 'Banda de metal com uma presença forte no cenário internacional.', 51, 2200.00),
+    (53, 'Amor Electro', 'Grupo pop com um som cativante e músicas que conquistaram o público português.', 54, 1200.00),
+    (54, 'Quim Barreiros', 'Artista popular, conhecido pelo seu estilo animado e músicas festivas.', 53, 800.00),
+    (55, 'HMB', 'Banda soul/pop com um som contemporâneo e presença marcante ao vivo.', 55, 1000.00),
+    (56, 'The Gift', 'Banda de música alternativa com composições originais e distintas.', 55, 1200.00),
+    (57, 'Pedro Abrunhosa', 'Músico com uma carreira sólida e várias canções de sucesso.', 56, 1500.00),
+    (58, 'Deolinda', 'Grupo musical com um estilo marcante que funde música tradicional com influências contemporâneas.', 67, 1200.00),
+    (59, 'António Zambujo', 'Fadista e músico talentoso com uma abordagem única e sofisticada.', 60, 1600.00),
+    (60, 'Aurea', 'Cantora pop com uma voz poderosa e músicas que alcançaram sucesso nacional.', 61, 1400.00),
+    (61, 'Dj Kura', 'Um dos DJs mais conhecidos em Portugal e também muito cotado internacionalmente.', 70, 1000.00);
 
 -- Povoamento da tabela "Atividade"
 -- DESC Atividade
@@ -177,23 +171,23 @@ DELETE FROM Atividade WHERE IdAtividade = 7;
 
 
 INSERT INTO Atividade
-(IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista)
+(IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista,CustoAtividade)
     VALUES
-    (1,"Prova da Açorda","Festival Anual da Prova da Açorca",false,"4710-251","São João do Souto","-----",'2023-12-02 15:00:00',NULL,2,NULL),
-    (2,"Concerto Maroon 5","Concerto que faz parte do festival anual, 'Braga em Festa'",true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2024-05-02 20:00:00',20000,3,16),
-    (3,"Concerto Ed Sheeran","Concerto que faz parte do festival anual, 'Braga em Festa'",true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2024-05-02 22:00:00',20000,3,5);
+    (1,"Prova da Açorda","Festival Anual da Prova da Açorca",false,"4710-251","São João do Souto","-----",'2023-12-02 15:00:00',NULL,2,NULL,100),
+    (2,"Concerto Maroon 5","Concerto que faz parte do festival anual, 'Braga em Festa'",true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2024-05-02 20:00:00',20000,3,16,4000),
+    (3,"Concerto Ed Sheeran","Concerto que faz parte do festival anual, 'Braga em Festa'",true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2024-05-02 22:00:00',20000,3,5,5000);
 INSERT INTO Atividade
-(IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista)
+(IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista,CustoAtividade)
     VALUES
-	(5,"Concerto Dark Side, Ato 1",NULL,true,"4710-251","Av. da Liberdade","Teatro Circo",'2024-10-11 21:30:00',897,1,4),
-    (6,"Concerto Dark Side, Ato 2",NULL,true,"4710-251","Av. da Liberdade","Teatro Circo",'2024-10-11 22:30:00',897,1,2),
-	(7,"May the Force be with you, Ato Final",NULL,true,"4710-251","Av. da Liberdade","Teatro Circo",'2024-10-11 23:30:00',897,1,13);
+	(5,"Concerto Dark Side, Ato 1",NULL,true,"4710-251","Av. da Liberdade","Teatro Circo",'2024-10-11 21:30:00',897,1,4,2500),
+    (6,"Concerto Dark Side, Ato 2",NULL,true,"4710-251","Av. da Liberdade","Teatro Circo",'2024-10-11 22:30:00',897,1,2,2500),
+	(7,"May the Force be with you, Ato Final",NULL,true,"4710-251","Av. da Liberdade","Teatro Circo",'2024-10-11 23:30:00',897,1,13,3000);
 INSERT INTO Atividade
-(IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista)
+(IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista,CustoAtividade)
     VALUES
-	(8,"Festa da Francesinha","",true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2024-05-02 20:00:00',NULL,2,NULL);
+	(8,"Festa da Francesinha","",true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2024-05-02 20:00:00',NULL,2,NULL,100);
 INSERT INTO Atividade
-(IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista)
+(IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista,CustoAtividade)
     VALUES
     (9, 'Mercado Riscado', '',false,'4710-405','Rua de Souto', 'Claustros do Largo do Paço','2023-11-18 16:00:00',NULL,6,NULL),
     (10, 'Exposiçao “Uma Cidade Sonhadora”, de Evandro Renan','',false,'4710-237','Rua de Sao Paulo','Biblioteca Lucio Craveiro da Silva', '2023-11-19 09:30:00', NULL,6,NULL),
@@ -202,7 +196,7 @@ INSERT INTO Atividade
     (13,'Oficina do Risco – Se Eu Abrir Esta Porta Agora', 'Oficina do Risco com Alexandre Rampazo',false,'4710-239','Rua Abade Loureiro','Mercado Municipal', '2023-11-26 11:30:00', NULL,6,NULL),
     (14,'Workshop com Gabriel Pacheco', 'Workshop de pintura', false,'4710-239','Rua de Sao Paulo','Auditório da Biblioteca Lúcio Craveiro da Silva', '2023-11-27 10:00:00', NULL,6,NULL);
     INSERT INTO Atividade
-(IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista)
+(IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista,CustoAtividade)
     VALUES
     (15,'Inauguração da Feira de Artesanato','', false,'4710-200','Rua da Praça','Praça Municipal', '2024-06-16 10:30:00', NULL,7,NULL),
     (16,'Faça-se Luz', 'Inauguraçao das Luzes de Sao Joao',false,'4710-332', 'Avenida Central','Chafariz', '2024-06-16 21:30:00', NULL,7,NULL),
@@ -215,7 +209,7 @@ INSERT INTO Atividade
     (23,'São João Popular afterparty', 'Djs e muito mais',false,'4710-288','Rua do Pópulo','Pópulo', '2024-06-24 01:00:00', NULL,7,NULL),
     (24,'Fogo de Encerramento','Fogo de artificio',false,'4710-455', 'Avenida Central', 'Avenida Central e Praça Municipal', '2024-06-24 23:30:00', NULL,7,NULL);
     INSERT INTO Atividade
-(IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista)
+(IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista,CustoAtividade)
     VALUES
     (25,'Concerto Xutos & Pontapés','Banda rock com uma trajetória longa e um impacto duradouro na música portuguesa.',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-16 19:00:00',20000,4,49),
     (26,'Concerto Rui Veloso','Pioneiro do rock em Portugal, com uma carreira marcante e várias músicas icônicas.',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-16 20:00:00',20000,4,47),
@@ -226,7 +220,7 @@ INSERT INTO Atividade
     (31,'Concerto Amor Electro','Grupo pop com um som cativante e músicas que conquistaram o público português.',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-17 00:40:00',20000,4,53),
     (32,'Mix Music com Dj Kura','Um dos Djs mais conhecidos em portugal e também muito cotado internacionalmente.',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-17 02:00:00',20000,4,61);
      INSERT INTO Atividade
-(IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista)
+(IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista,CustoAtividade)
     VALUES
     (33,'Espaço Tertúlia - Sessão Inaugural','Espetáculo de teatro de rua com encenação dos alunos do IEFP de Braga',false,"4705-002",'Rua da Praça','Praça Municipal','2024-07-01 21:45:00',NULL,8,NULL),
     (34,'Espaço Tertúlia - Apresentação de Livro','“Os Barrigas e os Magriços”, um conto de Álvaro Cunhal ilustrado por Susana Matos',false,"4705-002",'Avenida Central','Junto ao Chafariz','2024-07-02 15:00:00',NULL,8,NULL),
@@ -239,7 +233,7 @@ INSERT INTO Atividade
     (41,'Workshop na Biblioteca','Workshop - «Como utilizar os recursos da BPB?»',false,'4704-553','Largo do Paço','Biblioteca Pública de Braga','2024-07-11 16:30:00',NULL,8,NULL),
 	(42,'Espaço Tertúlia - Apresentação de Livro','"Política a 45 Graus", de José Maria Pimentel. Apresentação a cargo de António Ferreira',false,'4710-237','Rua de Sao Paulo','Biblioteca Lucio Craveiro da Silva','2024-07-12 17:00:00',NULL,8,NULL);
      INSERT INTO Atividade
-(IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista)
+(IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista,CustoAtividade)
     VALUES
    (43,'Abertura Hopen','Abertura do festival com oferta de uma cerveja artesanal',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-02 17:00:00',NULL,5,NULL),
    (44,'Sunset Cocktails','Sunset ao ar livre para aproveitar o pôr do sol',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-02 19:00:00',NULL,5,NULL),
@@ -260,7 +254,7 @@ VALUES
 	(1, 'Star Wars: O Concerto', 'Concerto épico sobre este incrível universo', '2024-10-11 21:30:00', '2024-10-11 21:30:00', '4710-251', 'Teatro Circo', '----', true, 0, 0, 0),
 	(2, 'Mes Gastronómico em Braga', 'Um mês de pura felicidade, com a melhor comida do país.', '2023-12-02 15:00:00', '2024-01-02 15:00:00', '4705-002', 'Braga', '-----', false, 0, 0, 0),
 	(3, 'Braga Authentica', 'Festival anual na cidade de braga', '2024-05-02 20:00:00', '2024-08-02 00:00:00', '4705-002', 'Altice Forum', '-----', true, 0, 0, 0),
-    (4, 'Xmas Night Music', 'Prepare-se para uma noite de pura nostalgia em Braga', '2023-12-16 19:00:00', '2024-12-17 05:00:00', '4705-002', 'Altice Forum', '-----', true, 0, 0, 0),
+    (4, 'Xmas Night Music', 'Prepare-se para uma noite de pura nostalgia em Braga', '2024-12-16 19:00:00', '2024-12-17 05:00:00', '4705-002', 'Altice Forum', '-----', true, 0, 0, 0),
     (5, 'Hopen – Braga Beer Festival', 'Hopen está de portas abertas e vai desafiar-te a explorar novos sabores e aromas das melhores cervejas artesanais','2023-06-02 17:00:00', '2024-06-04 23:00:00', '4700-210', 'Campo das Hortas', '-----', false, 0, 0, 0),
     (6, 'Braga em Risco', 'Ao longo de duas semanas, as ruas da cidade serão invadidas por ilustrações de artistas de todo o mundo','2023-11-18 14:30:00', '2023-11-30 12:30:00', '4700-320', 'Largo do Paço', '-----', false, 0, 0, 0),
     (7, 'Sao Joao de Braga', 'A Maior Festa Popular de Portugal','2024-06-16 10:30:00', '2024-06-24 23:30:00', '4715-406', 'Avenida Central', '-----', false, 0, 0, 0),
@@ -269,20 +263,23 @@ VALUES
     INSERT INTO Bilhete
 (NumBilhete,Preço,IdEvento,IdAtividade)
 	VALUES
-    (1,35.00,1,NULL),
-    (2,50.00,3,NULL);
-
-INSERT INTO Bilhete
-(NumBilhete,Preço,IdEvento,IdAtividade)
-	VALUES
-    (4,20.00,NULL,2);
-
+    (1,135.00,1,NULL), 	-- bilhete evento 1
+    (2,65.00,3,NULL), 	-- bilhete evento 3
+    (3,50.00,4,NULL), 	-- bilhete evento 4
+    (4,50.00,1,5), 		-- bilhete atividade id 5 do evento 1
+    (5,50.00,1,6), 		-- bilhete atividade id 6 do evento 1
+    (6,60.00,1,7),      -- bilhete atividade id 7 do evento 1
+    (7,12.50,2,8), 		-- bilhete atividade id 8 do evento 2 (evento gratuito, atividade paga)
+    (8,6.5,4,25),       -- bilhete atividade id 25 do evento 4
+    (9,6.5,4,26), 		-- bilhete atividade id 26 do evento 4
+    (10,6.5,4,27), 		-- bilhete atividade id 27 do evento 4
+    (11,6.5,4,28), 		-- bilhete atividade id 28 do evento 4
+    (12,6.5,4,29), 		-- bilhete atividade id 29 do evento 4
+    (13,6.5,4,30), 		-- bilhete atividade id 30 do evento 4
+    (14,6.5,4,31), 		-- bilhete atividade id 31 do evento 4
+    (15,6.5,4,32);		-- bilhete atividade id 32 do evento 4
     
-INSERT INTO Bilhete
-(NumBilhete,Preço,IdEvento,IdAtividade)
-	VALUES
-    (3,12.5,NULL,8);
-    
+
 
 
 

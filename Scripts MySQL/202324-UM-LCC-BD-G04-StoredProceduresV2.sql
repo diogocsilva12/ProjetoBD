@@ -11,11 +11,11 @@
 -- Implementação da transação de venda de bilhetes para um evento
 -- Criação de uma stored procedure para adicionar bilhetes vendidos para um Evento (todas as suas atividades), assim como a atualização de informações sobre o mesmo.
 -- Nesta stored procedure, os bilhetes também vão ser adicionados 1 a 1 a uma tabela bilhetes vendidos, de forma a ter uma segunda via para o controlo dos mesmos.
--- DROP PROCEDURE AtualizarInfoBilhetesVendidosEventos
+-- DROP PROCEDURE spVendaBilhetesEventos
 
 -- IMPLEMENTAR NESTA SP UMA TRANSÃO PARA ANALISE DE ERROS E REALIZAÇÃO DE COMMIT E ROLLBACK
 DELIMITER $$
-CREATE PROCEDURE spAtualizarInfoBilhetesVendidosEventos(
+CREATE PROCEDURE spVendaBilhetesEventos(
     IN QuantidadeBilhetes INTEGER,   -- Argumento de entrada relativa à quantidade de bilhetes a comprar.
     IN Evento_Id INTEGER,			 -- Argumento de entrada que diz qual o evento que queremos comprar o bilhete.
     OUT Resultado VARCHAR(150)		 -- Argumento de saída com informações relativas ao controlo de operações durante esta transação.
@@ -58,7 +58,6 @@ AtualizarBilhetesEvento:BEGIN
         UPDATE Atividade
         SET ValorTotal = IFNULL(ValorTotal, 0) + (PreçoBilhete * QuantidadeBilhetes),
             QuantidadeBilhetesVendidos = IFNULL(QuantidadeBilhetesVendidos, 0) + QuantidadeBilhetes,
-            Preço = PreçoBilhete,
             BilhetesDisponiveis = Lotação - QuantidadeBilhetesVendidos
         WHERE IdEvento = Evento_Id;
 		-- Ciclo que a cada iteração insere na tabela "BilhetesVendidos" informações relativas a cada bilhete
@@ -86,12 +85,11 @@ END$$
 -- Implementação da transação de venda de bilhetes para um evento
 -- Criação de uma stored procedure para adicionar bilhetes vendidos para um Evento (todas as suas atividades), assim como a atualização de informações sobre o mesmo.
 -- Nesta stored procedure, os bilhetes também vão ser adicionados 1 a 1 a uma tabela bilhetes vendidos, de forma a ter uma segunda via para o controlo dos mesmos.
--- DROP PROCEDURE AtualizarInfoBilhetesVendidosEventos
+-- DROP PROCEDURE spVendaBilhetesAtividades
 -- Este procedimento é para comprar bilhetes para atividades num evento
 -- adicionar o mesmo da de cima
 DELIMITER $$
-
-CREATE PROCEDURE spAtualizarInfoBilhetesVendidosAtividades(
+CREATE PROCEDURE spVendaBilhetesAtividades(
     IN QuantidadeBilhetes INTEGER,
     IN Atividade_Id INTEGER,
     OUT Resultado VARCHAR(150)
@@ -130,8 +128,7 @@ AtualizarBilhetesAtividades:BEGIN
         -- Atualiza os atributos do evento com base nos bilhetes vendidos
         UPDATE Evento
         SET ValorTotal = IFNULL(ValorTotal, 0) + (PreçoBilhete * QuantidadeBilhetes),
-            QuantidadeBilhetesVendidos = IFNULL(QuantidadeBilhetesVendidos, 0) + QuantidadeBilhetes,
-            Preço = PreçoBilhete
+            QuantidadeBilhetesVendidos = IFNULL(QuantidadeBilhetesVendidos, 0) + QuantidadeBilhetes
         WHERE IdEvento = Evento_Id;
         
         -- Atualiza os atributos da atividade com base nos bilhetes vendidos
@@ -197,10 +194,9 @@ BEGIN
 END$$
 
 -- ############################################################################################
-
+-- DROP PROCEDURE spResetAll
 
 DELIMITER $$
-
 CREATE PROCEDURE spResetAll(
     IN LastEvento INTEGER,
     IN LastAtividade INTEGER
@@ -210,7 +206,7 @@ BEGIN
     SET SQL_SAFE_UPDATES = 0;
     -- Reseta os valores dos eventos de 1 a LastEvento
     WHILE idx <= LastEvento DO
-        CALL ResetValoresEventos(idx);
+        CALL spResetValoresEventos(idx);
         SET idx = idx + 1;
     END WHILE;
     
@@ -218,7 +214,7 @@ BEGIN
     
     -- Reseta os valores das atividades de 1 a LastAtividade
     WHILE idx <= LastAtividade DO
-        CALL ResetValoresAtividades(idx);
+        CALL spResetValoresAtividades(idx);
         SET idx = idx + 1;
     END WHILE;
 
@@ -231,17 +227,68 @@ END$$
 -- ############################################################################################
 -- E X E M P L O S
 -- USE EVENTOS;
+
 -- Exemplo da venda de bilhetes para um evento concluida com sucesso.
 -- Venda de 5 bilhetes para o Evento 1.
-CALL AtualizarInfoBilhetesVendidosEventos(5, 1, @Resultado);
+CALL spVendaBilhetesEventos(5,1,@Resultado);
 SELECT @Resultado;
+-- Venda de 5 bilhetes para o Evento 3.
+CALL spVendaBilhetesEventos(5,3,@Resultado);
+SELECT @Resultado;
+-- Venda de 5 bilhetes para o Evento 4.
+CALL spVendaBilhetesEventos(5,4,@Resultado);
+SELECT @Resultado;
+-- *****************************************
+-- Venda de 5 bilhetes para a Atividade 5.
+CALL spVendaBilhetesAtividades(5,5,@Resultado);
+SELECT @Resultado;
+-- Venda de 5 bilhetes para a Atividade 6.
+CALL spVendaBilhetesAtividades(5,6,@Resultado);
+SELECT @Resultado;
+-- Venda de 5 bilhetes para a Atividade 7.
+CALL spVendaBilhetesAtividades(5,7,@Resultado);
+SELECT @Resultado;
+-- Venda de 5 bilhetes para a Atividade 8.
+CALL spVendaBilhetesAtividades(5,8,@Resultado);
+SELECT @Resultado;
+-- Venda de 5 bilhetes para a Atividade 25.
+CALL spVendaBilhetesAtividades(5,25,@Resultado);
+SELECT @Resultado;
+-- Venda de 5 bilhetes para a Atividade 26.
+CALL spVendaBilhetesAtividades(5,26,@Resultado);
+SELECT @Resultado;
+-- Venda de 5 bilhetes para a Atividade 27.
+CALL spVendaBilhetesAtividades(5,27,@Resultado);
+SELECT @Resultado;
+-- Venda de 5 bilhetes para a Atividade 28.
+CALL spVendaBilhetesAtividades(5,28,@Resultado);
+SELECT @Resultado;
+-- Venda de 5 bilhetes para a Atividade 29.
+CALL spVendaBilhetesAtividades(5,29,@Resultado);
+SELECT @Resultado;
+-- Venda de 5 bilhetes para a Atividade 30.
+CALL spVendaBilhetesAtividades(5,30,@Resultado);
+SELECT @Resultado;
+-- Venda de 5 bilhetes para a Atividade 31.
+CALL spVendaBilhetesAtividades(5,31,@Resultado);
+SELECT @Resultado;
+-- Venda de 5 bilhetes para a Atividade 32.
+CALL spVendaBilhetesAtividades(5,32,@Resultado);
+SELECT @Resultado;
+
+
+
+
+
 
 -- QUERIES para a validação da transação anterior
 SELECT * FROM Evento
-	WHERE IdEvento = 1;
 SELECT * FROM Atividade
-	WHERE IdEvento = 1;
-    
+SELECT * FROM BilhetesVendidos
+
+
+
+CALL spResetAll(100,100);
     
 -- Exemplo 
 -- ############################################################################################
