@@ -99,7 +99,7 @@ CREATE EVENT RelatorioDiario
 END;
 $$
             
-SELECT * FROM RelatorioDiario
+SELECT * FROM RelatorioDiario;
 
 -- QUERIE f)
 -- Listar todos os eventos grátis

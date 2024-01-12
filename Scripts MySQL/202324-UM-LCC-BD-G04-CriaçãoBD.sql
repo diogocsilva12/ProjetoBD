@@ -38,7 +38,7 @@ CREATE TABLE Evento(
     Pago BOOLEAN NOT NULL,
     ValorTotal INTEGER,
     QuantidadeBilhetesVendidos INTEGER,
-	CustoEvento DECIMAL(8,2),
+	CustoEvento DECIMAL(8,2) NOT NULL,
     Preço DECIMAL(8,2),
 		PRIMARY KEY(IdEvento)
 	
@@ -64,7 +64,7 @@ CREATE TABLE Atividade(
     QuantidadeBilhetesVendidos INTEGER,
     BilhetesDisponiveis INTEGER,
     Preço DECIMAL(8,2),
-    CustoAtividade DECIMAL(8,2),
+    CustoAtividade DECIMAL(8,2) NOT NULL,
 		PRIMARY KEY(IdAtividade),
 		FOREIGN KEY(IdArtista)
 			REFERENCES Artista(IdArtista),
@@ -81,7 +81,7 @@ CREATE TABLE Artista(
     Nome VARCHAR(70) NOT NULL,
     Descrição TEXT,
     IdAgente INTEGER NOT NULL,
-    CustoArtista DECIMAL(8,2),
+    CustoArtista DECIMAL(8,2) NOT NULL,
 		PRIMARY KEY(IdArtista),
         FOREIGN KEY(IdAgente)
 			REFERENCES Agente(IdAgente)
