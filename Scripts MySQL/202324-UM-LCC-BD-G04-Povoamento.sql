@@ -189,76 +189,77 @@ INSERT INTO Atividade
 INSERT INTO Atividade
 (IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista,CustoAtividade)
     VALUES
-    (9, 'Mercado Riscado', '',false,'4710-405','Rua de Souto', 'Claustros do Largo do Paço','2023-11-18 16:00:00',NULL,6,NULL),
-    (10, 'Exposiçao “Uma Cidade Sonhadora”, de Evandro Renan','',false,'4710-237','Rua de Sao Paulo','Biblioteca Lucio Craveiro da Silva', '2023-11-19 09:30:00', NULL,6,NULL),
-    (11,' Exposiçao - Sonhos ou Pesadelos?', 'Exposição Coletiva dos Alunos do MIA/IPCA',false,'4710-922','Rua do Raio','Palácio do Raio', '2023-11-20 12:30:00', NULL,6,NULL),
-    (12,'Apresentação do Livro – Marcelo, Marmelo, Martelo', 'Apresentação do Livro com Raquel Costa e Bárbara Bulhosa',false,'4710-922','Rua do Souto','Salão Medieval da Reitoria da Universidade do Minho', '2023-11-25 14:30:00', NULL,6,NULL),
-    (13,'Oficina do Risco – Se Eu Abrir Esta Porta Agora', 'Oficina do Risco com Alexandre Rampazo',false,'4710-239','Rua Abade Loureiro','Mercado Municipal', '2023-11-26 11:30:00', NULL,6,NULL),
-    (14,'Workshop com Gabriel Pacheco', 'Workshop de pintura', false,'4710-239','Rua de Sao Paulo','Auditório da Biblioteca Lúcio Craveiro da Silva', '2023-11-27 10:00:00', NULL,6,NULL);
+    (9, 'Mercado Riscado', '',false,'4710-405','Rua de Souto', 'Claustros do Largo do Paço','2023-11-18 16:00:00',NULL,6,NULL,300),
+    (10, 'Exposiçao “Uma Cidade Sonhadora”, de Evandro Renan','',false,'4710-237','Rua de Sao Paulo','Biblioteca Lucio Craveiro da Silva', '2023-11-19 09:30:00', NULL,6,NULL,500),
+    (11,' Exposiçao - Sonhos ou Pesadelos?', 'Exposição Coletiva dos Alunos do MIA/IPCA',false,'4710-922','Rua do Raio','Palácio do Raio', '2023-11-20 12:30:00', NULL,6,NULL,200),
+    (12,'Apresentação do Livro – Marcelo, Marmelo, Martelo', 'Apresentação do Livro com Raquel Costa e Bárbara Bulhosa',false,'4710-922','Rua do Souto','Salão Medieval da Reitoria da Universidade do Minho', '2023-11-25 14:30:00', NULL,6,NULL,150),
+    (13,'Oficina do Risco – Se Eu Abrir Esta Porta Agora', 'Oficina do Risco com Alexandre Rampazo',false,'4710-239','Rua Abade Loureiro','Mercado Municipal', '2023-11-26 11:30:00', NULL,6,NULL,800),
+    (14,'Workshop com Gabriel Pacheco', 'Workshop de pintura', false,'4710-239','Rua de Sao Paulo','Auditório da Biblioteca Lúcio Craveiro da Silva', '2023-11-27 10:00:00', NULL,6,NULL,450);
     INSERT INTO Atividade
 (IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista,CustoAtividade)
     VALUES
-    (15,'Inauguração da Feira de Artesanato','', false,'4710-200','Rua da Praça','Praça Municipal', '2024-06-16 10:30:00', NULL,7,NULL),
-    (16,'Faça-se Luz', 'Inauguraçao das Luzes de Sao Joao',false,'4710-332', 'Avenida Central','Chafariz', '2024-06-16 21:30:00', NULL,7,NULL),
-    (17,'Rodopiada de Gigantones e Cabeçudos', 'Grupos Culturais',false, '4710-324', 'Praça da Republica', 'Chafariz', '2024-06-17 12:00:00', NULL,7,NULL),
-    (18,'Concentração de automóveis antigos e clássicos','',false, '4710-455', 'Rua Abade Loureiro', 'Praça do Comércio', '2024-06-18 09:30:00', NULL,7,NULL),
-    (19,'A UMinho vem ao São João','Noite académica',false, '4710-455', 'Avenida Central', 'Avenida Central e Praça Municipal', '2024-06-19 21:00:00', NULL,7,NULL),
-    (20,'Concerto - Cantemos o São João','Grupos Culturais',false, '4700-030', 'Rua Dom Afonso Henriques', 'Igreja de São João do Souto', '2024-06-20 21:30:00', NULL,7,NULL),
-    (21,'Gala Sanjoanina','',false, '4710-251', 'Avenida da Liberdade','Theatro Circo', '2024-06-21 21:30:00', '897',7,NULL),
-    (22,'Abertura Oficial das Festas de São João de Braga','',false,'4710-217','Rua dos Capelistas','Praça do Municipio', '2024-06-23 10:00:00', NULL,7,NULL),
-    (23,'São João Popular afterparty', 'Djs e muito mais',false,'4710-288','Rua do Pópulo','Pópulo', '2024-06-24 01:00:00', NULL,7,NULL),
-    (24,'Fogo de Encerramento','Fogo de artificio',false,'4710-455', 'Avenida Central', 'Avenida Central e Praça Municipal', '2024-06-24 23:30:00', NULL,7,NULL);
+    (15,'Inauguração da Feira de Artesanato','', false,'4710-200','Rua da Praça','Praça Municipal', '2024-06-16 10:30:00', NULL,7,NULL,2500),
+    (16,'Faça-se Luz', 'Inauguraçao das Luzes de Sao Joao',false,'4710-332', 'Avenida Central','Chafariz', '2024-06-16 21:30:00', NULL,7,NULL,50000),
+    (17,'Rodopiada de Gigantones e Cabeçudos', 'Grupos Culturais',false, '4710-324', 'Praça da Republica', 'Chafariz', '2024-06-17 12:00:00', NULL,7,NULL,1000),
+    (18,'Concentração de automóveis antigos e clássicos','',false, '4710-455', 'Rua Abade Loureiro', 'Praça do Comércio', '2024-06-18 09:30:00', NULL,7,NULL,2000),
+    (19,'A UMinho vem ao São João','Noite académica',false, '4710-455', 'Avenida Central', 'Avenida Central e Praça Municipal', '2024-06-19 21:00:00', NULL,7,NULL,300),
+    (20,'Concerto - Cantemos o São João','Grupos Culturais',false, '4700-030', 'Rua Dom Afonso Henriques', 'Igreja de São João do Souto', '2024-06-20 21:30:00', NULL,7,NULL,300),
+    (21,'Gala Sanjoanina','',false, '4710-251', 'Avenida da Liberdade','Theatro Circo', '2024-06-21 21:30:00', '897',7,NULL,5000),
+    (22,'Abertura Oficial das Festas de São João de Braga','',false,'4710-217','Rua dos Capelistas','Praça do Municipio', '2024-06-23 10:00:00', NULL,7,NULL,0),
+    (23,'São João Popular afterparty', 'Djs e muito mais',false,'4710-288','Rua do Pópulo','Pópulo', '2024-06-24 01:00:00', NULL,7,NULL,12000),
+    (24,'Fogo de Encerramento','Fogo de artificio',false,'4710-455', 'Avenida Central', 'Avenida Central e Praça Municipal', '2024-06-24 23:30:00', NULL,7,NULL,8000);
     INSERT INTO Atividade
 (IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista,CustoAtividade)
     VALUES
-    (25,'Concerto Xutos & Pontapés','Banda rock com uma trajetória longa e um impacto duradouro na música portuguesa.',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-16 19:00:00',20000,4,49),
-    (26,'Concerto Rui Veloso','Pioneiro do rock em Portugal, com uma carreira marcante e várias músicas icônicas.',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-16 20:00:00',20000,4,47),
-    (27,'Concerto Quim Barreiros','Artista popular, conhecido pelo seu estilo animado e músicas festivas',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-16 21:00:00',20000,4,54),
-    (28,'Concerto The Gift','Banda de música alternativa com composições originais e distintas',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-16 21:45:00',20000,4,56),
-    (29,'Concerto Pedro Abrunhosa','Músico com uma carreira sólida e várias canções de sucesso ',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-16 22:35:00',20000,4,57),
-    (30,'Concerto Aurea','Cantora pop com uma voz poderosa e músicas que alcançaram sucesso nacional.',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-16 23:30:00',20000,4,60),
-    (31,'Concerto Amor Electro','Grupo pop com um som cativante e músicas que conquistaram o público português.',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-17 00:40:00',20000,4,53),
-    (32,'Mix Music com Dj Kura','Um dos Djs mais conhecidos em portugal e também muito cotado internacionalmente.',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-17 02:00:00',20000,4,61);
+    (25,'Concerto Xutos & Pontapés','Banda rock com uma trajetória longa e um impacto duradouro na música portuguesa.',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-16 19:00:00',20000,4,49,1500),
+    (26,'Concerto Rui Veloso','Pioneiro do rock em Portugal, com uma carreira marcante e várias músicas icônicas.',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-16 20:00:00',20000,4,47,1800),
+    (27,'Concerto Quim Barreiros','Artista popular, conhecido pelo seu estilo animado e músicas festivas',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-16 21:00:00',20000,4,54,800),
+    (28,'Concerto The Gift','Banda de música alternativa com composições originais e distintas',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-16 21:45:00',20000,4,56,1200),
+    (29,'Concerto Pedro Abrunhosa','Músico com uma carreira sólida e várias canções de sucesso ',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-16 22:35:00',20000,4,57,1500),
+    (30,'Concerto Aurea','Cantora pop com uma voz poderosa e músicas que alcançaram sucesso nacional.',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-16 23:30:00',20000,4,60,1400),
+    (31,'Concerto Amor Electro','Grupo pop com um som cativante e músicas que conquistaram o público português.',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-17 00:40:00',20000,4,53,1200),
+    (32,'Mix Music com Dj Kura','Um dos Djs mais conhecidos em portugal e também muito cotado internacionalmente.',true,"4705-002","R. Monsenhor Airosa","Altice Forum",'2023-12-17 02:00:00',20000,4,61,1000);
      INSERT INTO Atividade
 (IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista,CustoAtividade)
     VALUES
-    (33,'Espaço Tertúlia - Sessão Inaugural','Espetáculo de teatro de rua com encenação dos alunos do IEFP de Braga',false,"4705-002",'Rua da Praça','Praça Municipal','2024-07-01 21:45:00',NULL,8,NULL),
-    (34,'Espaço Tertúlia - Apresentação de Livro','“Os Barrigas e os Magriços”, um conto de Álvaro Cunhal ilustrado por Susana Matos',false,"4705-002",'Avenida Central','Junto ao Chafariz','2024-07-02 15:00:00',NULL,8,NULL),
-    (35,'Espaço Tertúlia - Apresentação de Projeto',' Projeto «Todos vivemos a mesma viagem de maneiras diferentes»',false,'4710-237','Rua de Sao Paulo','Biblioteca Lucio Craveiro da Silva','2024-07-04 14:30:00',NULL,8,NULL),
-    (36,'Biblioteca Pública de Braga - Visita Guiada',' A Biblioteca Pública de Braga (BPB),oferece visitas guiadas ao seu espaço com o objetivo de dar a conhecer o espaço arquitetónico onde se encontra instalada',false,'4704-553','Largo do Paço','Biblioteca Pública de Braga','2024-07-05 13:00:00',NULL,8,NULL),
-    (37,'Centro Histórico de Braga - Visita Orientada e Intervenção Artística','Projeto «Todos vivemos a mesma viagem de maneiras diferentes»',false,'4700-424','Rua Dom Paio Mendes','Sé de Braga','2024-07-07 10:30:00',NULL,8,NULL),
-    (38,'Espetáculo Musical - Samba sem Fronteiras','O Samba Sem Fronteiras acontece para manter viva esta antiga chama, de uma música que nasceu para celebrar a vida',false,'4710-237','Rua de Sao Paulo','Biblioteca Lucio Craveiro da Silva','2024-07-08 19:00:00',NULL,8,NULL),
-    (39,'Música e Poesia','«Três Versos e Um Copo», Grupo de Poesia da Universidade do Minho',false,"4700-322",'Largo De Santa Cruz','Jardim da Casa dos Coimbras','2024-07-09 21:30:00',NULL,8,NULL),
-    (40,'Espaço dst - DO IT YOURSELF','DO IT YOURSELF: a educação e mediação cultural ao serviço da inclusão',false,'4710-922','Rua do Raio','Palácio do Raio','2024-07-11 15:00:00',NULL,8,NULL),
-    (41,'Workshop na Biblioteca','Workshop - «Como utilizar os recursos da BPB?»',false,'4704-553','Largo do Paço','Biblioteca Pública de Braga','2024-07-11 16:30:00',NULL,8,NULL),
-	(42,'Espaço Tertúlia - Apresentação de Livro','"Política a 45 Graus", de José Maria Pimentel. Apresentação a cargo de António Ferreira',false,'4710-237','Rua de Sao Paulo','Biblioteca Lucio Craveiro da Silva','2024-07-12 17:00:00',NULL,8,NULL);
+    (33,'Espaço Tertúlia - Sessão Inaugural','Espetáculo de teatro de rua com encenação dos alunos do IEFP de Braga',false,"4705-002",'Rua da Praça','Praça Municipal','2024-07-01 21:45:00',NULL,8,NULL,700),
+    (34,'Espaço Tertúlia - Apresentação de Livro','“Os Barrigas e os Magriços”, um conto de Álvaro Cunhal ilustrado por Susana Matos',false,"4705-002",'Avenida Central','Junto ao Chafariz','2024-07-02 15:00:00',NULL,8,NULL,350),
+    (35,'Espaço Tertúlia - Apresentação de Projeto',' Projeto «Todos vivemos a mesma viagem de maneiras diferentes»',false,'4710-237','Rua de Sao Paulo','Biblioteca Lucio Craveiro da Silva','2024-07-04 14:30:00',NULL,8,NULL,500),
+    (36,'Biblioteca Pública de Braga - Visita Guiada',' A Biblioteca Pública de Braga (BPB),oferece visitas guiadas ao seu espaço com o objetivo de dar a conhecer o espaço arquitetónico onde se encontra instalada',false,'4704-553','Largo do Paço','Biblioteca Pública de Braga','2024-07-05 13:00:00',NULL,8,NULL,250),
+    (37,'Centro Histórico de Braga - Visita Orientada e Intervenção Artística','Projeto «Todos vivemos a mesma viagem de maneiras diferentes»',false,'4700-424','Rua Dom Paio Mendes','Sé de Braga','2024-07-07 10:30:00',NULL,8,NULL,450),
+    (38,'Espetáculo Musical - Samba sem Fronteiras','O Samba Sem Fronteiras acontece para manter viva esta antiga chama, de uma música que nasceu para celebrar a vida',false,'4710-237','Rua de Sao Paulo','Biblioteca Lucio Craveiro da Silva','2024-07-08 19:00:00',NULL,8,NULL,800),
+    (39,'Música e Poesia','«Três Versos e Um Copo», Grupo de Poesia da Universidade do Minho',false,"4700-322",'Largo De Santa Cruz','Jardim da Casa dos Coimbras','2024-07-09 21:30:00',NULL,8,NULL,750),
+    (40,'Espaço dst - DO IT YOURSELF','DO IT YOURSELF: a educação e mediação cultural ao serviço da inclusão',false,'4710-922','Rua do Raio','Palácio do Raio','2024-07-11 15:00:00',NULL,8,NULL,350),
+    (41,'Workshop na Biblioteca','Workshop - «Como utilizar os recursos da BPB?»',false,'4704-553','Largo do Paço','Biblioteca Pública de Braga','2024-07-11 16:30:00',NULL,8,NULL,400),
+	(42,'Espaço Tertúlia - Apresentação de Livro','"Política a 45 Graus", de José Maria Pimentel. Apresentação a cargo de António Ferreira',false,'4710-237','Rua de Sao Paulo','Biblioteca Lucio Craveiro da Silva','2024-07-12 17:00:00',NULL,8,NULL,800);
      INSERT INTO Atividade
 (IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista,CustoAtividade)
     VALUES
-   (43,'Abertura Hopen','Abertura do festival com oferta de uma cerveja artesanal',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-02 17:00:00',NULL,5,NULL),
-   (44,'Sunset Cocktails','Sunset ao ar livre para aproveitar o pôr do sol',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-02 19:00:00',NULL,5,NULL),
-   (45,'Hopen After Party','After Party após o encerramento no Setra',false,'4700-325','Rua de Sao Joao', 'Setra Braga','2023-06-03 02:10:00',NULL,5,NULL),
-   (46,'Passeio de Bicicleta','Um passeio de bicicleta CYCLE CHIC por Braga',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-03 15:00:00',NULL,5,NULL),
-   (47,'Showcooking BEER and CHEESE','Showcooking organizado pela marca Cerveja Burguesa',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-03 18:00:00',NULL,5,NULL),
-   (48,'Apresentaçao e Prova de cerveja artesanal','Apresentaçao de Cervejas artesanais pela Malteca Cervejaria',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-03 22:00:00',NULL,5,NULL),
-   (49,'Atuaçao Tuna UM','Atuaçao da Tuna de Medicina da Universidade do Minho',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-04 15:00:00',NULL,5,NULL),
-   (50,'Workshop Produçao de Cerveja','Workshop que visa explicar o processo da produçao de cervejas artesanais',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-04 17:00:00',NULL,5,NULL),
-   (51,'DJ Set Encerramento','Dj Set vinil Musica com Clasen para encerrar o Festival',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-04 23:00:00',NULL,5,NULL);
+   (43,'Abertura Hopen','Abertura do festival com oferta de uma cerveja artesanal',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-02 17:00:00',NULL,5,NULL,3000),
+   (44,'Sunset Cocktails','Sunset ao ar livre para aproveitar o pôr do sol',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-02 19:00:00',NULL,5,NULL,750),
+   (45,'Hopen After Party','After Party após o encerramento no Setra',false,'4700-325','Rua de Sao Joao', 'Setra Braga','2023-06-03 02:10:00',NULL,5,NULL,2500),
+   (46,'Passeio de Bicicleta','Um passeio de bicicleta CYCLE CHIC por Braga',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-03 15:00:00',NULL,5,NULL,1000),
+   (47,'Showcooking BEER and CHEESE','Showcooking organizado pela marca Cerveja Burguesa',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-03 18:00:00',NULL,5,NULL,800),
+   (48,'Apresentaçao e Prova de cerveja artesanal','Apresentaçao de Cervejas artesanais pela Malteca Cervejaria',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-03 22:00:00',NULL,5,NULL,400),
+   (49,'Atuaçao Tuna UM','Atuaçao da Tuna de Medicina da Universidade do Minho',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-04 15:00:00',NULL,5,NULL,300),
+   (50,'Workshop Produçao de Cerveja','Workshop que visa explicar o processo da produçao de cervejas artesanais',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-04 17:00:00',NULL,5,NULL,700),
+   (51,'DJ Set Encerramento','Dj Set vinil Musica com Clasen para encerrar o Festival',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-04 23:00:00',NULL,5,NULL,2000);
+
 SELECT * FROM ATIVIDADE;
 SELECT * FROM EVENTO;
 
 
 
-INSERT INTO Evento (IdEvento, Nome, Descrição, DataInicio, DataFim, CodPostal, DescriçãoLocal, Rua, Pago, ValorTotal, QuantidadeBilhetesVendidos, Preço)
+INSERT INTO Evento (IdEvento, Nome, Descrição, DataInicio, DataFim, CodPostal, DescriçãoLocal, Rua, Pago, ValorTotal, QuantidadeBilhetesVendidos, Preço, CustoEvento)
 VALUES
-	(1, 'Star Wars: O Concerto', 'Concerto épico sobre este incrível universo', '2024-10-11 21:30:00', '2024-10-11 21:30:00', '4710-251', 'Teatro Circo', '----', true, 0, 0, 0),
-	(2, 'Mes Gastronómico em Braga', 'Um mês de pura felicidade, com a melhor comida do país.', '2023-12-02 15:00:00', '2024-01-02 15:00:00', '4705-002', 'Braga', '-----', false, 0, 0, 0),
-	(3, 'Braga Authentica', 'Festival anual na cidade de braga', '2024-05-02 20:00:00', '2024-08-02 00:00:00', '4705-002', 'Altice Forum', '-----', true, 0, 0, 0),
-    (4, 'Xmas Night Music', 'Prepare-se para uma noite de pura nostalgia em Braga', '2024-12-16 19:00:00', '2024-12-17 05:00:00', '4705-002', 'Altice Forum', '-----', true, 0, 0, 0),
-    (5, 'Hopen – Braga Beer Festival', 'Hopen está de portas abertas e vai desafiar-te a explorar novos sabores e aromas das melhores cervejas artesanais','2023-06-02 17:00:00', '2024-06-04 23:00:00', '4700-210', 'Campo das Hortas', '-----', false, 0, 0, 0),
-    (6, 'Braga em Risco', 'Ao longo de duas semanas, as ruas da cidade serão invadidas por ilustrações de artistas de todo o mundo','2023-11-18 14:30:00', '2023-11-30 12:30:00', '4700-320', 'Largo do Paço', '-----', false, 0, 0, 0),
-    (7, 'Sao Joao de Braga', 'A Maior Festa Popular de Portugal','2024-06-16 10:30:00', '2024-06-24 23:30:00', '4715-406', 'Avenida Central', '-----', false, 0, 0, 0),
-    (8, 'Feira do Livro', 'Uma cidade livro aberto, onde cada um pode e deve escrever a sua história', '2024-07-01 10:00:00', '2024-07-12 17:00:00', '4710-235', 'Avenida Central', '-----', false, 0, 0, 0);
+	(1, 'Star Wars: O Concerto', 'Concerto épico sobre este incrível universo', '2024-10-11 21:30:00', '2024-10-11 21:30:00', '4710-251', 'Teatro Circo', '----', true, 0, 0, 0,25000),
+	(2, 'Mes Gastronómico em Braga', 'Um mês de pura felicidade, com a melhor comida do país.', '2023-12-02 15:00:00', '2024-01-02 15:00:00', '4705-002', 'Braga', '-----', false, 0, 0, 0,1000),
+	(3, 'Braga Authentica', 'Festival anual na cidade de braga', '2024-05-02 20:00:00', '2024-08-02 00:00:00', '4705-002', 'Altice Forum', '-----', true, 0, 0, 0,100000),
+    (4, 'Xmas Night Music', 'Prepare-se para uma noite de pura nostalgia em Braga', '2024-12-16 19:00:00', '2024-12-17 05:00:00', '4705-002', 'Altice Forum', '-----', true, 0, 0, 0,50000),
+    (5, 'Hopen – Braga Beer Festival', 'Hopen está de portas abertas e vai desafiar-te a explorar novos sabores e aromas das melhores cervejas artesanais','2023-06-02 17:00:00', '2024-06-04 23:00:00', '4700-210', 'Campo das Hortas', '-----', false, 0, 0, 0,2000),
+    (6, 'Braga em Risco', 'Ao longo de duas semanas, as ruas da cidade serão invadidas por ilustrações de artistas de todo o mundo','2023-11-18 14:30:00', '2023-11-30 12:30:00', '4700-320', 'Largo do Paço', '-----', false, 0, 0, 0,1500),
+    (7, 'Sao Joao de Braga', 'A Maior Festa Popular de Portugal','2024-06-16 10:30:00', '2024-06-24 23:30:00', '4715-406', 'Avenida Central', '-----', false, 0, 0, 0,250000),
+    (8, 'Feira do Livro', 'Uma cidade livro aberto, onde cada um pode e deve escrever a sua história', '2024-07-01 10:00:00', '2024-07-12 17:00:00', '4710-235', 'Avenida Central', '-----', false, 0, 0, 0,500);
     
     INSERT INTO Bilhete
 (NumBilhete,Preço,IdEvento,IdAtividade)
@@ -278,6 +279,32 @@ VALUES
     (13,6.5,4,30), 		-- bilhete atividade id 30 do evento 4
     (14,6.5,4,31), 		-- bilhete atividade id 31 do evento 4
     (15,6.5,4,32);		-- bilhete atividade id 32 do evento 4
+    
+    INSERT INTO Staff
+    (idStaff,Nome,Função,Telefone)
+    VALUES
+    (1,"Miguelino Silva", "Bartender", "+351 111 111 111"),
+    (2,"Miguelina Barbosa", "Limpeza", "+351 222 222 222"),
+    (3,"Vitorino", "Som", "+351 333 333 333"),
+    (4,"Abrantes de Miguel", "Som", "+351 444 444 444"),
+    (5,"D.Sancho II", "Iluminação", "+351 555 555 555"),
+    (6,"Ambrosio", "Iluminação", "+351 666 666 666"),
+    (7,"Tonecas Quim", "Limpeza", "+351 777 777 777");
+    
+	INSERT INTO StaffEvento
+    (Staff,Evento)
+    VALUES
+    (1,2),
+    (2,2),
+    (3,1),
+    (4,4),
+    (5,3),
+    (6,1),
+    (7,1);
+    
+    
+    
+    
     
 
 

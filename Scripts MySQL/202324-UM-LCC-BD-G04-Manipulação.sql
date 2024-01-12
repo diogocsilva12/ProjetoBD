@@ -110,7 +110,7 @@ SELECT IdEvento, Nome FROM Evento
 
 -- g) Selecionar os eventos grátis que tenham atividades pagas, dizendo quais são as atividades pagas e os respetivos valores
 
-
+		
 SELECT E.IdEvento, E.Nome AS Evento, A.Nome AS Atividade, B.Preço AS Preco
 	FROM Evento AS E
     INNER JOIN Atividade AS A
