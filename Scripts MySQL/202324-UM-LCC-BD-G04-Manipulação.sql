@@ -99,7 +99,7 @@ CREATE EVENT RelatorioDiario
 END;
 $$
             
-SELECT * FROM RelatorioDiario
+SELECT * FROM RelatorioDiario;
 
 -- QUERIE f)
 -- Listar todos os eventos grátis
@@ -108,7 +108,7 @@ SELECT IdEvento, Nome FROM Evento
 	WHERE Pago = false
 
 
--- g) Selecionar os eventos grátis que tenham atividades pagas, dizendo quais são as atividades pagas e os respetivos valores
+-- g) Selecionar os evenstos grátis que tenham atividades pagas, dizendo quais são as atividades pagas e os respetivos valores
 
 SELECT E.IdEvento, E.Nome AS Evento, A.Nome AS Atividade, B.Preço AS Preco
 	FROM Evento AS E

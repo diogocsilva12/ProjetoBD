@@ -104,7 +104,8 @@ AtualizarBilhetesAtividades:BEGIN
     DECLARE vErro INT DEFAULT 0;
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
         SET vErro = 1;
-
+        
+	START TRANSACTION;
     -- Obtenha o IdEvento relacionado à IdAtividade
     SELECT IdEvento INTO Evento_Id
     FROM Atividade
@@ -118,6 +119,7 @@ AtualizarBilhetesAtividades:BEGIN
     -- Se a atividade for gratuita, exibe uma mensagem de erro e sai do procedimento
     IF AtividadePaga = 0 THEN
         SET Resultado = 'Esta atividade é gratuita. Não é possível adicionar bilhetes.';
+        ROLLBACK;
     ELSE
         -- Obtém o preço do bilhete para a atividade
         SELECT Preço INTO PreçoBilhete
@@ -148,7 +150,9 @@ AtualizarBilhetesAtividades:BEGIN
         
         IF vErro = 1 THEN
             SET Resultado = 'Transação abortada. Ocorreu um erro durante as operações.';
+            ROLLBACK;
         ELSE
+			COMMIT; -- Confirmação da transação
             SET Resultado = 'Transação concluída com sucesso!';
         END IF;
     END IF;
@@ -156,8 +160,58 @@ END$$
 
 -- ############################################################################################
 -- spTop5Receitas 
+-- DROP PROCEDURE spTop5Receitas
+DELIMITER $$
+CREATE PROCEDURE spTop5Receitas()
+	BEGIN
+		SELECT IdEvento, Nome , QuantidadeBilhetesVendidos, ValorTotal
+        FROM Evento
+        ORDER BY(ValorTotal) DESC
+        LIMIT 5;
+	END$$
+    
+CALL spTop5Receitas()
+-- ###########################################################################################
+-- 
+DELIMITER $$
+CREATE PROCEDURE spListaEventos(
+    IN Mes INTEGER -- 1 corresponde a Janeiro, 2 a Fevereiro, etc...
+)
 
--- sp
+BEGIN
+        SELECT 
+            E.Nome AS NomeEvento,
+            E.Descrição AS DescriçãoEvento,
+            CONCAT(E.DataInicio, '-', E.DataFim) AS DataEvento,
+            A.Nome AS NomeAtividade,
+            A.Descrição AS DescriçãoAtividade,
+            A.Data AS DataAtividade
+        FROM Evento AS E
+        INNER JOIN Atividade AS A ON E.IdEvento = A.IdEvento
+        WHERE MONTH(E.DataInicio) = Mes;
+END$$ 
+CALL spListaEventos(10);
+
+-- ###########################################################################################
+-- DROP FUNCTION fuTotalGastoAno
+-- Função fuTotalGastoAno , recebe um ano e retorna o total de gastos desse ano
+DELIMITER $$
+CREATE FUNCTION fuTotalGastoAno(Ano INTEGER)
+	RETURNS DECIMAL(10,2)
+    DETERMINISTIC
+BEGIN
+    DECLARE totalGasto DECIMAL(10,2);
+    SELECT 
+        SUM(CustoEvento)
+    INTO totalGasto
+    FROM Evento AS E
+    WHERE YEAR(DataInicio) = Ano;
+    RETURN totalGasto;
+END$$
+
+SELECT fuTotalGastoAno(2023)
+SELECT CustoEvento FROM Evento
+
 
 
 -- ############################################################################################
