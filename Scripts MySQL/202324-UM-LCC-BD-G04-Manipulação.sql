@@ -40,7 +40,7 @@ SELECT IdEvento, ValorTotal FROM Evento
 	ORDER BY(ValorTotal) DESC;
 
 
--- QUERIE e)
+-- QUERIE d)
 -- Selecionar os agentes que agenciam 2 ou mais artistas e quem agenciam.
 
 SELECT A.Nome AS NomeAgente, AR.Nome AS NomeArtista
@@ -55,9 +55,53 @@ SELECT A.Nome AS NomeAgente, AR.Nome AS NomeArtista
 		GROUP BY A.IdAgente
 		HAVING COUNT(AR.IdAgente) > 2
 )
-	
 
--- QUERIE h)
+-- QUERIE e)
+-- e)Fazer um relatório diário da receita gerada por cada evento. (por ano)
+-- Para realizar esta interrogação temos que criar uma tabela auxiliar "RelatorioDiario"
+
+CREATE TABLE RelatorioDiario(
+	IdRelatorio INTEGER AUTO_INCREMENT,
+    Data DATETIME,
+    NumeroEvento INTEGER NOT NULL,
+    BilhetesVendidos INTEGER,
+    QuantidadeBilhetes INTEGER,
+    ValorFaturado DECIMAL (8,2),
+    PRIMARY KEY (IdRelatorio),
+    FOREIGN KEY (NumeroEvento)
+		REFERENCES Evento(IdEvento)
+)ENGINE = InnoDB;
+
+-- Criação do Scheduler para atualizar esta tabela diariamente com o relatório diário
+
+DELIMITER $$
+CREATE EVENT RelatorioDiario
+	ON SCHEDULE 
+		EVERY 1 DAY
+        STARTS CURRENT_DATE + INTERVAL 1 DAY
+	DO 
+    BEGIN
+		DECLARE dataVenda DATE;
+        SET dataVenda = CURDATE();
+        
+        INSERT INTO RelatorioDiario(IdRelatorio,Data,IdEvento,BilhetesVendidos,QuantidadeBilhetes,ValorFaturado)
+        SELECT
+			NULL,
+            dataVenda,
+            IdEvento,
+            COUNT(IdBilheteVendido) AS BilhetesVendidos,
+            SUM(Quantidade) AS QuantidadeBilhetes,
+            SUM(Quantidade * PreçoVenda) AS ValorFaturado
+		FROM BilhetesVendidos
+        WHERE DATE(DataVenda) = dataVenda
+        GROUP BY IdEvento;
+        
+END;
+$$
+            
+SELECT * FROM RelatorioDiario
+
+-- QUERIE f)
 -- Listar todos os eventos grátis
 
 SELECT IdEvento, Nome FROM Evento

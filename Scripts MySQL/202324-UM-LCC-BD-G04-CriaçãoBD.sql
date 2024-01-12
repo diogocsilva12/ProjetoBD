@@ -156,7 +156,7 @@ CREATE TABLE BilhetesVendidos (
     Quantidade INTEGER NOT NULL,
     DataVenda DATETIME NOT NULL,
     PreçoVenda DECIMAL(8,2) NOT NULL,
-    IdBilhete INT,
+    IdBilhete INTEGER,
     PRIMARY KEY (IdBilheteVendido),
     FOREIGN KEY (IdEvento) 
 			REFERENCES Evento(IdEvento),
