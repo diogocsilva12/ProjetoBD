@@ -3,7 +3,7 @@
 -- Disciplina de Base de Dados 
 -- MySQL 8.1.0 (MySQL Community Server) ->Usamos o comanod SELECT VERSION(), para verificar em que versão o MySQL está a correr.
 -- SELECT VERSION()
--- 2023, Outubro/Novembro
+-- 2024,Janeiro
 -- **
 
 

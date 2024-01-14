@@ -4,6 +4,7 @@
 -- MySQL 8.1.0 (MySQL Community Server) ->Usamos o comanod SELECT VERSION(), para verificar em que versão o MySQL está a correr.
 -- SELECT VERSION()
 -- Grupo 4 - Diogo Coelho da Silva (A100092) - Pedro Miguel Oliveira Ramôa (A97686) 2023, 2024.
+-- 2024, Janeiro
 -- **
 
 -- **   Q U E R I E S   **  
@@ -13,6 +14,7 @@
 -- QUERIE a)
 -- Contabilizar o número de eventos que foram realizados num dado ano. 
 -- Usamos um sp para a QUERIE funcionar para qualquer ano
+-- DROP PROCEDURE spContaEventosAno
 DELIMITER $$
 CREATE PROCEDURE spContaEventosAno(
 	IN Ano INT
@@ -23,7 +25,11 @@ BEGIN
 	WHERE YEAR(DATAINICIO) = Ano;
 END $$
 
+-- Testes para o procedimento
+CALL spContaEventosAno(2023);
 CALL spContaEventosAno(2024);
+CALL spContaEventosAno(2025);
+
 
 -- QUERIE b)
 -- Obter o número de bilhetes vendidos por evento, ordenados por quantidade de bilhetes vendidos.
@@ -60,6 +66,7 @@ SELECT A.Nome AS NomeAgente, AR.Nome AS NomeArtista
 -- e)Fazer um relatório diário da receita gerada por cada evento. (por ano)
 -- Para realizar esta interrogação temos que criar uma tabela auxiliar "RelatorioDiario"
 
+-- Criação de uma tabela para permitir a realização desta querie
 CREATE TABLE RelatorioDiario(
 	IdRelatorio INTEGER AUTO_INCREMENT,
     Data DATETIME,
@@ -73,7 +80,8 @@ CREATE TABLE RelatorioDiario(
 )ENGINE = InnoDB;
 
 -- Criação do Scheduler para atualizar esta tabela diariamente com o relatório diário
-
+-- DROP EVENT RelatorioDiario
+-- SHOW EVENTS FROM Evento
 DELIMITER $$
 CREATE EVENT RelatorioDiario
 	ON SCHEDULE 
@@ -107,10 +115,9 @@ SELECT * FROM RelatorioDiario;
 SELECT IdEvento, Nome FROM Evento
 	WHERE Pago = false
 
+--  QUERIE g)
+-- Selecionar os eventos grátis que tenham atividades pagas, dizendo quais são as atividades pagas e os respetivos valores
 
--- g) Selecionar os eventos grátis que tenham atividades pagas, dizendo quais são as atividades pagas e os respetivos valores
-
-		
 SELECT E.IdEvento, E.Nome AS Evento, A.Nome AS Atividade, B.Preço AS Preco
 	FROM Evento AS E
     INNER JOIN Atividade AS A

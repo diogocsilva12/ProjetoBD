@@ -3,7 +3,7 @@
 -- Disciplina de Base de Dados 
 -- Povoamento Inicial da base de dados
 -- MySQL 8.1.0 (MySQL Community Server) (Usamos o comanod SELECT VERSION(), para verificar em que versão o MySQL está a correr.
--- 2023, Outubro/Novembro
+-- 2024, Janeiro
 -- Todos os dados inseridos na base de dados são fictícios.
 -- **
 
@@ -165,10 +165,6 @@ INSERT INTO Artista (IdArtista, Nome, Descrição, IdAgente, CustoArtista)
 -- DESC Atividade
 -- SELECT * FROM Atividade
 -- DELETE  FROM Atividade
-DELETE FROM Atividade WHERE IdAtividade = 5;
-DELETE FROM Atividade WHERE IdAtividade = 6;
-DELETE FROM Atividade WHERE IdAtividade = 7;
-
 
 INSERT INTO Atividade
 (IdAtividade,Nome,Descrição,Pago,CodPostal,Rua,DescriçãoLocal,Data,Lotação,IdEvento,IdArtista,CustoAtividade)
@@ -245,11 +241,12 @@ INSERT INTO Atividade
    (50,'Workshop Produçao de Cerveja','Workshop que visa explicar o processo da produçao de cervejas artesanais',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-04 17:00:00',NULL,5,NULL,700),
    (51,'DJ Set Encerramento','Dj Set vinil Musica com Clasen para encerrar o Festival',false,'4700-210','Rua Nova da Estaçao', 'Campo das Hortas','2023-06-04 23:00:00',NULL,5,NULL,2000);
 
-SELECT * FROM ATIVIDADE;
-SELECT * FROM EVENTO;
 
 
-
+-- Povoamento da tabela "Evento"
+-- DESC Evento
+-- SELECT * FROM Evento
+-- DELETE FROM Evento
 INSERT INTO Evento (IdEvento, Nome, Descrição, DataInicio, DataFim, CodPostal, DescriçãoLocal, Rua, Pago, ValorTotal, QuantidadeBilhetesVendidos, Preço, CustoEvento)
 VALUES
 	(1, 'Star Wars: O Concerto', 'Concerto épico sobre este incrível universo', '2024-10-11 21:30:00', '2024-10-11 21:30:00', '4710-251', 'Teatro Circo', '----', true, 0, 0, 0,25000),
@@ -261,7 +258,12 @@ VALUES
     (7, 'Sao Joao de Braga', 'A Maior Festa Popular de Portugal','2024-06-16 10:30:00', '2024-06-24 23:30:00', '4715-406', 'Avenida Central', '-----', false, 0, 0, 0,250000),
     (8, 'Feira do Livro', 'Uma cidade livro aberto, onde cada um pode e deve escrever a sua história', '2024-07-01 10:00:00', '2024-07-12 17:00:00', '4710-235', 'Avenida Central', '-----', false, 0, 0, 0,500);
     
-    INSERT INTO Bilhete
+
+-- Povoamento da tabela "Bilhete"
+-- DESC Bilhete
+-- SELECT * FROM Bilhete
+-- DELETE FROM Bilhete 
+INSERT INTO Bilhete
 (NumBilhete,Preço,IdEvento,IdAtividade)
 	VALUES
     (1,135.00,1,NULL), 	-- bilhete evento 1
@@ -280,7 +282,11 @@ VALUES
     (14,6.5,4,31), 		-- bilhete atividade id 31 do evento 4
     (15,6.5,4,32);		-- bilhete atividade id 32 do evento 4
     
-    INSERT INTO Staff
+-- Povoamento da tabela "Staff"
+-- DESC Staff
+-- SELECT * FROM Staff
+-- DELETE FROM Staff
+INSERT INTO Staff
     (idStaff,Nome,Função,Telefone)
     VALUES
     (1,"Miguelino Silva", "Bartender", "+351 111 111 111"),
@@ -290,8 +296,12 @@ VALUES
     (5,"D.Sancho II", "Iluminação", "+351 555 555 555"),
     (6,"Ambrosio", "Iluminação", "+351 666 666 666"),
     (7,"Tonecas Quim", "Limpeza", "+351 777 777 777");
-    
-	INSERT INTO StaffEvento
+
+-- Povoamento da tabela "StaffEvento"
+-- DESC StaffEvento
+-- SELECT * FROM StaffEvento
+-- DELETE FROM StaffEvento
+INSERT INTO StaffEvento
     (Staff,Evento)
     VALUES
     (1,2),
